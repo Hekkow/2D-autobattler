@@ -1,0 +1,82 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmmvrh38mvda1"]
+
+[ext_resource type="Script" path="res://UI.gd" id="1_b4kq0"]
+[ext_resource type="Theme" uid="uid://byrm3rct3q5rw" path="res://Theme.tres" id="2_ddcfe"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ev8h3"]
+bg_color = Color(0.164706, 0.164706, 0.164706, 1)
+
+[node name="Control" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b4kq0")
+
+[node name="Panel" type="Panel" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ev8h3")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 233.0
+offset_top = 88.0
+offset_right = 313.0
+offset_bottom = 152.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+
+[node name="Inventory" type="VBoxContainer" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 127.0
+offset_top = 97.0
+offset_right = 155.0
+offset_bottom = 189.0
+theme = ExtResource("2_ddcfe")
+
+[node name="Store" type="HBoxContainer" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 11.0
+offset_top = 5.0
+offset_right = 178.0
+offset_bottom = 75.0
+
+[node name="Money" type="Label" parent="."]
+layout_mode = 0
+offset_left = 413.0
+offset_top = 5.0
+offset_right = 472.0
+offset_bottom = 28.0
+theme = ExtResource("2_ddcfe")
+text = "MONEY"
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 163.0
+offset_right = 114.0
+offset_bottom = 243.0
+
+[node name="Reroll" type="Button" parent="Buttons"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+theme = ExtResource("2_ddcfe")
+text = "Reroll"
+
+[node name="Start" type="Button" parent="Buttons"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+theme = ExtResource("2_ddcfe")
+text = "START"

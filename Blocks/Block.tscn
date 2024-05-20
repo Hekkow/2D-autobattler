@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bcd520jhgxnsx"]
+
+[ext_resource type="PackedScene" uid="uid://do3055dluervj" path="res://DeathParticles.tscn" id="2_sj4aw"]
+[ext_resource type="Texture2D" uid="uid://crwadx4h8wb2s" path="res://Sprites/Block.png" id="3_buvo6"]
+[ext_resource type="PackedScene" uid="uid://dd4dg60a2hjnt" path="res://Flash.tscn" id="3_k3tn6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jr1eb"]
+size = Vector2(12, 12)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+collision_layer = 65
+collision_mask = 65
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jr1eb")
+
+[node name="DeathParticles" parent="." instance=ExtResource("2_sj4aw")]
+
+[node name="Flash" parent="." instance=ExtResource("3_k3tn6")]
+
+[node name="Block" type="Sprite2D" parent="."]
+modulate = Color(0.643137, 0.823529, 0.788235, 1)
+texture = ExtResource("3_buvo6")

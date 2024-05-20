@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://clywxdjx3qtkk"]
+
+[ext_resource type="Texture2D" uid="uid://bymcpwtfm0s1o" path="res://Sprites/Circle.png" id="1_01e8t"]
+[ext_resource type="PackedScene" uid="uid://dd4dg60a2hjnt" path="res://Flash.tscn" id="2_bhrvl"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture_filter = 1
+position = Vector2(2, 2)
+scale = Vector2(3, 3)
+texture = ExtResource("1_01e8t")
+
+[node name="Flash" parent="." instance=ExtResource("2_bhrvl")]

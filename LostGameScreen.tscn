@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnxs8721tt37j"]
+
+[ext_resource type="Theme" uid="uid://byrm3rct3q5rw" path="res://Theme.tres" id="1_67sn2"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 240.0
+offset_top = 135.0
+offset_right = 240.0
+offset_bottom = 135.0
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CenterContainer"]
+layout_mode = 2
+theme = ExtResource("1_67sn2")
+text = "you lost haha"
+horizontal_alignment = 1

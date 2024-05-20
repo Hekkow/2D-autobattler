@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://do3055dluervj"]
+
+[sub_resource type="Gradient" id="Gradient_atccm"]
+offsets = PackedFloat32Array(0.193133, 0.854077)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[node name="DeathParticles" type="CPUParticles2D"]
+emitting = false
+amount = 15
+lifetime = 0.2
+one_shot = true
+explosiveness = 0.75
+fract_delta = false
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 303.57
+initial_velocity_max = 357.15
+angle_max = 360.0
+scale_amount_min = 4.0
+scale_amount_max = 6.0
+color_ramp = SubResource("Gradient_atccm")

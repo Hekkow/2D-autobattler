@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cy4cfk1al382o"]
+
+[ext_resource type="PackedScene" uid="uid://bcd520jhgxnsx" path="res://Blocks/LeaderBlock.tscn" id="1_xdjke"]
+[ext_resource type="Script" path="res://Blocks/BaseBlock.gd" id="3_wiey2"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_xdjke")]
+position = Vector2(541, 332)
+
+[node name="CharacterBody2D2" parent="CharacterBody2D" instance=ExtResource("1_xdjke")]
+position = Vector2(0, -50)
+script = ExtResource("3_wiey2")

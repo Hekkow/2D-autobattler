@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://drymeoahk3q38"]
+
+[ext_resource type="PackedScene" uid="uid://783qnr2gs1hf" path="res://Blocks/InventoryBlock.tscn" id="1_f2a8q"]
+[ext_resource type="Theme" uid="uid://b8gpfgk1wxi0c" path="res://ShopButton.tres" id="1_hcejh"]
+
+[node name="Button" type="Button"]
+custom_minimum_size = Vector2(90, 70)
+offset_right = 90.0
+offset_bottom = 50.0
+theme = ExtResource("1_hcejh")
+
+[node name="InventoryBlock" parent="." instance=ExtResource("1_f2a8q")]
+layout_mode = 1
+offset_left = 39.0
+offset_top = 50.0
+offset_right = -39.0
+offset_bottom = -8.0
+mouse_filter = 2

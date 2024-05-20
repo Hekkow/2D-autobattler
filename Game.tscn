@@ -1,0 +1,90 @@
+[gd_scene load_steps=6 format=3 uid="uid://bcfk238isvl4n"]
+
+[ext_resource type="PackedScene" uid="uid://bmmvrh38mvda1" path="res://UI.tscn" id="1_rmb2b"]
+[ext_resource type="Script" path="res://Game.gd" id="1_rpc1i"]
+[ext_resource type="PackedScene" uid="uid://b3cbxb85rh4bc" path="res://Wall.tscn" id="3_a4xin"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cye6g"]
+resource_local_to_scene = true
+size = Vector2(520.063, 51.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1maok"]
+resource_local_to_scene = true
+size = Vector2(54.125, 346)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_rpc1i")
+
+[node name="SizeDetection" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="SizeDetection"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource("1_rmb2b")]
+
+[node name="Projectiles" type="Node" parent="."]
+
+[node name="Wall" parent="." instance=ExtResource("3_a4xin")]
+position = Vector2(-3, 2)
+
+[node name="CollisionShape2D" parent="Wall" index="0"]
+position = Vector2(227.969, -19)
+shape = SubResource("RectangleShape2D_cye6g")
+
+[node name="ColorRect" parent="Wall" index="1"]
+offset_left = -31.0
+offset_top = -40.0
+offset_right = 487.0
+offset_bottom = 7.0
+
+[node name="Wall2" parent="." instance=ExtResource("3_a4xin")]
+position = Vector2(-6, 4)
+
+[node name="CollisionShape2D" parent="Wall2" index="0"]
+position = Vector2(250, 277)
+shape = SubResource("RectangleShape2D_cye6g")
+
+[node name="ColorRect" parent="Wall2" index="1"]
+offset_left = -10.0
+offset_top = 251.0
+offset_right = 511.0
+offset_bottom = 304.0
+
+[node name="Wall3" parent="." instance=ExtResource("3_a4xin")]
+position = Vector2(20, 237)
+
+[node name="CollisionShape2D" parent="Wall3" index="0"]
+position = Vector2(-39, -103)
+shape = SubResource("RectangleShape2D_1maok")
+
+[node name="ColorRect" parent="Wall3" index="1"]
+offset_left = -67.0
+offset_top = -277.0
+offset_right = -12.0
+offset_bottom = 69.0
+
+[node name="Wall4" parent="." instance=ExtResource("3_a4xin")]
+position = Vector2(20, 237)
+
+[node name="CollisionShape2D" parent="Wall4" index="0"]
+position = Vector2(476, -100)
+shape = SubResource("RectangleShape2D_1maok")
+
+[node name="ColorRect" parent="Wall4" index="1"]
+offset_left = 450.0
+offset_top = -273.0
+offset_right = 505.0
+offset_bottom = 72.0
+
+[editable path="Wall"]
+[editable path="Wall2"]
+[editable path="Wall3"]
+[editable path="Wall4"]

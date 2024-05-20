@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://k2vfbjoblbrd"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_poxml"]
+
+[node name="Player" type="CharacterBody2D"]
+collision_mask = 2
+script = ExtResource("1_poxml")

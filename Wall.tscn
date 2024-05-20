@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3cbxb85rh4bc"]
+
+[ext_resource type="Script" path="res://Wall.gd" id="1_1uv5w"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_p6agr"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4i5r2"]
+resource_local_to_scene = true
+size = Vector2(1187, 20)
+
+[node name="Wall" type="StaticBody2D"]
+collision_layer = 207
+collision_mask = 207
+physics_material_override = SubResource("PhysicsMaterial_p6agr")
+script = ExtResource("1_1uv5w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(579, 0)
+shape = SubResource("RectangleShape2D_4i5r2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -1.0
+offset_top = -12.0
+offset_right = 1170.0
+offset_bottom = 9.0

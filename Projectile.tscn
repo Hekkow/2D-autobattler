@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://g5wo7m16a4jx"]
+
+[ext_resource type="PackedScene" uid="uid://dqu6tsb7ilwwo" path="res://ImpactParticles.tscn" id="1_ry6yl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n2qci"]
+resource_local_to_scene = true
+size = Vector2(4, 4)
+
+[node name="Projectile" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 8
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+color = Color(0, 0.788235, 0.792157, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_n2qci")
+
+[node name="ImpactParticles" parent="." instance=ExtResource("1_ry6yl")]

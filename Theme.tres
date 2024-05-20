@@ -1,0 +1,11 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://byrm3rct3q5rw"]
+
+[ext_resource type="FontFile" uid="uid://tv82wyftirvv" path="res://Daydream.ttf" id="1_vbcia"]
+
+[resource]
+Button/colors/icon_pressed_color = Color(1, 1, 1, 0)
+Button/font_sizes/font_size = 7
+Button/fonts/font = ExtResource("1_vbcia")
+Label/font_sizes/font_size = 12
+Label/fonts/font = ExtResource("1_vbcia")
+VBoxContainer/constants/separation = 14

@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dukekuv7qk3wp"]
+
+[ext_resource type="Texture2D" uid="uid://doa445oj1psft" path="res://Sprites/DragAndDrop.png" id="1_7b4cq"]
+
+[node name="Container" type="Container"]
+custom_minimum_size = Vector2(16, 16)
+offset_right = 16.0
+offset_bottom = 16.0
+
+[node name="DragAndDrop" type="Sprite2D" parent="."]
+position = Vector2(8, 8)
+texture = ExtResource("1_7b4cq")
